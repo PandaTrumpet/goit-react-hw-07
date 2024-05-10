@@ -1,5 +1,5 @@
 import { useId } from "react";
-// import css from "./ContactForm.module.css";
+import css from "./ContactForm.module.css";
 import { addContact } from "../../redux/contactsOps";
 import { useDispatch } from "react-redux";
 export default function ContactFrom() {
@@ -20,14 +20,20 @@ export default function ContactFrom() {
     form.reset();
   };
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor={name}>Name</label>
-        <input type="text" id={name} name="name" />
-        <label htmlFor={number}>Number</label>
-        <input type="text" id={number} name="number" />
-        <button type="submit">Add contact</button>
+    <div>
+      <form onSubmit={handleSubmit} className={css.mainForm}>
+        <div className={css.formContainer}>
+          <label htmlFor={name}>Name</label>
+          <input type="text" id={name} name="name" />
+        </div>
+        <div className={css.formContainer}>
+          <label htmlFor={number}>Number</label>
+          <input type="text" id={number} name="number" />
+        </div>
+        <button type="submit" className={css.btnContact}>
+          Add contact
+        </button>
       </form>
-    </>
+    </div>
   );
 }

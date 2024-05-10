@@ -55,11 +55,11 @@ const contactSlice = createSlice({
 export const selectError = (state) => state.contact.error;
 
 export const selectLoading = (state) => state.contact.loading;
-console.log(selectLoading);
+// console.log(selectLoading);
 export const selectContacts = (state) => state.contact.items;
 // console.log(selectLoading());
 
-export const visibleContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [(state) => state.contact.items, (state) => state.filter.name],
   (contacts, contactFilter) => {
     return contacts.filter((contact) =>
@@ -67,4 +67,5 @@ export const visibleContacts = createSelector(
     );
   }
 );
+// console.log(contactSlice);
 export default contactSlice.reducer;

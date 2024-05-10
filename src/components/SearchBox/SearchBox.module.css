@@ -1,0 +1,8 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+}
+.searchInput {
+  max-width: 200px;
+  min-height: 20px;
+}
