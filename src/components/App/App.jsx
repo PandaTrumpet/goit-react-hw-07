@@ -5,7 +5,7 @@ import Loader from "../Loader/Loader";
 import SearchBox from "../SearchBox/SearchBox";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectLoading } from "../../redux/contactSlice";
+import { selectLoading } from "../../redux/contactsSlice";
 function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
